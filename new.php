@@ -38,10 +38,11 @@ include "db/queries.php";
     <input type="button" onclick="
     var success = redirectToCreateToDo(
         document.getElementById('txt').value,
-        document.getElementById('category').value
-        );
+        document.getElementById('category').value,
+        function(){
+            document.getElementById('hidden_value').submit();
+        });
     if (success){
-        document.getElementById('hidden_value').submit();
         return true;
     }
     else

@@ -188,7 +188,7 @@ function DrawSubmitEditButton($entry){
 function DrawSubmitNewSubButton($todo, $entry){
 
     echo "
-    <input type='submit' value='c' onclick='alert(document.getElementById(\"new_entry_$entry\").value); redirectToCreateSubEntry(
+    <input type='submit' value='c' onclick='redirectToCreateSubEntry(
         document.getElementById(\"new_entry_$entry\").value,$todo,$entry,reloadPage);'>";
 }
 
@@ -200,7 +200,7 @@ function DrawSubmitNewButton($todo){
 
 function DrawSubmitDeleteToDoButton($todo){
     echo "
-    <input type='submit' value='d' onclick='redirectToDeleteToDo($todo); moveToPage(\"index.php\");'>";
+    <input type='submit' value='d' onclick='redirectToDeleteToDo($todo,moveToPage(\"index.php\"));'>";
 }
 
 function DrawSubmitDeleteEntryButton($entry){
