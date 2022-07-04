@@ -154,14 +154,14 @@ function DrawSubEntry($todo, $top_entry,$table_depth){
         for ($i = 0; $i < $table_depth;$i++){
             if ($i == $entry_depth){
                 echo "<td>";
-                DrawInputNewButton($top_entry);
+                DrawInputNewButton($show[0]);
                 echo"</td>";
             }
             else
                 echo "<td></td>";
         }
         echo "<td>";
-        DrawSubmitNewSubButton($todo,$top_entry);
+        DrawSubmitNewSubButton($todo,$show[0]);
         echo"</td>";
         echo "</tr>";
 
